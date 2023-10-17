@@ -7,13 +7,16 @@ To train a neural network with 3d aware tasks, we need dataset coming with seman
 Thus we provide a DAZ3d Generator, which consists of:
 - Facial Animations: 1000 key-frames
 - Upper Body Poses: 1000 key-frames
-- Three R/G/B attenuated lights: to create the depth and normal info simultaneously.
+- Three R/G/B attenuated lights: to create the depth and normal info simultaneously
+- A 360 rotate camera, targeting at center of human-body
 
-DAZ3d has the ability of rendering img at photo-realistic quality with NVIDIA-IRAY engine, it also provide different kinds of view-ports mode which can also be rendered as img dense/semantic label.
+DAZ3d has the ability of rendering img at photo-realistic quality with NVIDIA-IRAY engine, it also provide different kinds of viewport modes(1.wireframe 2.texture-shaded 3.photo-real 4.toonify, etc.) which can also be rendered as img dense/semantic label.
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/sample-02.jpg)
 
+Key-frame sequences are listed at ANIMATE2 pannel, so you can play with them like scale-time/flip-animation/swap-sequences, etc. You can also change the render-settings (like resolution) to meet your training task demands.
+With outputs of different render-modes, you can scale/rotate/crop your imgs, or interpolate your photo-real img with your rendered label-img. To keep head and body within your result img, we recommend project: https://github.com/ChiCheng123/JointDet , which can detect human head and body at fast speed. Sample code is provided at Demo.py
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/sample-01.jpg)
 
-https://github.com/ChiCheng123/JointDet
+
