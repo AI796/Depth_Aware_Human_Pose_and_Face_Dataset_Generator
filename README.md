@@ -10,7 +10,7 @@ Thus we provide a DAZ3d Generator, which consists of:
 - Three R/G/B attenuated lights: to create the depth and normal info simultaneously
 - A 360 rotate camera, targeting at center of human-body
 
-DAZ3d has the ability of rendering img at photo-realistic quality with NVIDIA-IRAY engine, it also provide different kinds of viewport modes(1.wireframe 2.texture-shaded 3.photo-real 4.toonify, etc.) which can also be rendered as img dense/semantic label.
+DAZ3d has the ability of rendering img at photo-realistic quality with NVIDIA-IRAY engine, it also provide different kinds of viewport modes(1.wireframe 2.texture-shaded 3.photo-real 4.toonify, etc.) which can also be treated as img dense/semantic label.
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/sample-02.jpg)
 
