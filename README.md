@@ -19,12 +19,16 @@ With outputs of different render-modes, you can scale/rotate/crop your imgs, or 
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/sample-01.jpg)
 
-
+ 
 
 
 ## Method for creation of Random Sample Dimention-Aligned Dataset
 
+- Safe_Border Calculation
+
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/img_rotate_method.jpg)
+
+- ROI Calculation
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/img_zoom_method.jpg)
 
