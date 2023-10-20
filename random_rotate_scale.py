@@ -1,16 +1,17 @@
 # random rotate/scale dataset
 # using cv2.getAffineTransform & cv2.warpAffine to align a random rotated and scaled region(represented as sympy.RegularPolygon) from a 2048x2048pixel img.
-# pip install sympy
-import cv2
+
+import cv2,os
 import numpy as np
 from tqdm import tqdm
 from time import time
 # pip install Sympy , online help: https://www.osgeo.cn/sympy/modules/geometry/index.html
 # from sympy import *
 from sympy import Point2D,Polygon,Line,Circle,Segment2D,pi,RegularPolygon
-import os
-srcroot=r"D:/NN/Daz3D_Human_dataset"
-dstroot=r"D:/dataset/DAZ3d_rotate_crop"
+
+# hyper_params
+srcroot=r"/dataset"
+dstroot=r"/rotate_crop"
 ROI_init_rotation=pi/4
 ROI_rect_rotation_range=[-60/180*pi,60/180*pi]
 randomrange=ROI_rect_rotation_range[1]-ROI_rect_rotation_range[0]
@@ -18,6 +19,7 @@ randomstart=ROI_rect_rotation_range[0]+ROI_init_rotation
 IMG_size=2048
 multiply_=2 
 
+# you need create detection result using demo.py code first!
 def parse_detection_npydata(file=r"path/smart_construction_detection_example.npy"):
     npdata=np.load(file=file,allow_pickle=True)
     try:
