@@ -34,6 +34,6 @@ demo code at random_rotate_scale.py
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/img_augment.jpg)
 
-vertex alignment
+vertex alignment: v[2]:origin(0,0), v[3]:lower_left↙️, v[0]:lower_right↘️
 
 ![image](https://github.com/AI796/Depth_Aware_Human_Pose_and_Face_Dataset_Generator/blob/main/img/vertex_alignment.jpg)
